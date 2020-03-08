@@ -146,7 +146,9 @@ li{
 .services-box{
   max-width: 300px;
   width: 100%;
-  min-height: 124px;
+  overflow: hidden;
+  height: 103px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -170,6 +172,7 @@ li{
   font-size: 12px;
   line-height: 22px;
   text-align: justify;
+  overflow:hidden;
 }
 .services-border{
   height: 6px;
@@ -182,7 +185,7 @@ li{
 	color:#5f6680;
 }
 .portfolio-inner{
-	padding: 64px 0px 10px;
+	padding: 63px 0px 10px;
 }
 .portfolio-title{
     font-family:'Lato', sans-serif;
@@ -276,6 +279,9 @@ li{
     font-size: 18px;
     line-height: 18px;
     margin: 14px 0px 9px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .about-item-text{
     font-family:'Lato', sans-serif;
@@ -283,8 +289,10 @@ li{
     font-size: 11px;
     line-height: 22px;
     text-align: justify;
+    height: 50px;
+    margin-bottom: 16px;
     word-spacing:3px;
-    padding-bottom: 23px;
+    overflow:hidden;
 }
 .about-btn-box button{
 	width: 33px;
@@ -367,11 +375,11 @@ li{
   padding: 8px 15px;
   resize:none;
   outline:none;
-    color:#f0c5c4;
-    font-family:'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    overflow: hidden;
+  color:#f0c5c4;
+  font-family:'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  overflow: hidden;
     
 }
 .form-box-left textarea::-webkit-input-placeholder{
@@ -404,6 +412,7 @@ li{
     padding-bottom: 22px;
     word-spacing:-1px;
     color:#f0c5c4;
+    overflow: hidden;
 }
 .form-box-links{
   height: 100px;
@@ -421,6 +430,7 @@ li{
   position:relative;
   right: 13px;
   padding-left:16px;
+  top:2px;
 }
 .form-box-links .link-phone a:before{
   font-family: 'icomoon';
@@ -428,8 +438,8 @@ li{
   right: 10px;
     padding-left:13px;
     display: inline-block;
-    top:5px;
-    left:-4px;
+    top:7px;
+    left:-5px;
     transform: rotate(270deg);
     font-size: 13px;
 }
