@@ -1,3 +1,3 @@
 # singolo
 
-[Singolo](https://sapranovich.github.io/index.html "Конечный вариант")
+[Singolo](https://singolo.github.io/index.html "Конечный вариант")
