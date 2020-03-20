@@ -678,6 +678,7 @@ padding-left: 23px;
   padding: 30px 50px;
   background-color:#f06c64;
   border-radius: 5px;
+  word-wrap:break-word;
 }
 #message p{
     font-family:'Lato', sans-serif;
