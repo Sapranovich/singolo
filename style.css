@@ -1,6 +1,9 @@
 *{
   box-sizing: border-box;
 }
+html{
+scroll-behavior: smooth;
+}
 a{
   text-decoration: none;// Убираем подчеркивание у ссылок
   display: inline-block;
@@ -18,7 +21,11 @@ li{
   margin:0 auto; /* Центровка */
   padding:0 10px; 
 }
-
+header{
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
+}
 .header{
   background-color: #2d303a;
   min-height: 89px;
@@ -51,16 +58,25 @@ li{
 .header-menu li{
     display: inline-block;
 }
-.header-menu a{
+
+.header-menu-link{
     font-family:'Lato', sans-serif;
     font-weight: 700;
     font-size: 12px;
     line-height: 12px;
     color:#fff;
 }
-.header-menu a:hover{
+.header-menu-link.active{
+  color:#ea676b;
+  cursor: default;
+}
+
+.header-menu-link:not(.active):hover{
   color:#f06c64;
 }
+/*.header-menu a:hover{
+  color:#f06c64;
+}*/
 .header-menu p{
     display: inline-block;
     color:#323746;
@@ -74,22 +90,139 @@ li{
   height: 6px;
   background-color:#323746;
 }
-.slider{
-  min-height: 594px;
-  background-color:#f06c64;
+
+
+/*.slider-list{
+   max-height: 594px;
+   height: 100%;
+   white-space:nowrap;
 }
 .slider-item{
-  outline: none;
+  min-height: 594px;
+  width: 100vw;
+  display: inline-block;
+}*/
+/*.slider:after{
+  content: "";
+  padding-top:89px;
+  margin-top: 89px;
+}*/
+
+#Iservices{
+  padding-top: 89px;
+  margin-top: -89px;
 }
-.slider-item-content{
+#Iportfolio{
+  padding-top: 89px;
+  margin-top: -89px;
+}
+#Iabout{
+  padding-top: 89px;
+  margin-top: -89px;
+}
+#Iform{
+  padding-top: 88px;
+  margin-top: -88px;
+}
+
+.slider{
+  position: relative;
+  width: 100vw;
+  margin-top: 89px;
+}
+.slider__container{
+  position: relative;
+  width: 100vw;
+  height: 594px;
+  overflow:hidden;
+}
+section{
+  overflow:hidden;
+}
+.slider__list{
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 594px;
+}
+.slider__item{
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 594px;
+  background-color: gold;
+}
+.slider-btns{
+  position: absolute;
+  width: 960px;
   display: flex;
   justify-content: space-between;
-  padding: 53px 71px 58px 72px;
+  left:50vw;
+  margin-left: -480px;
+  top:47%;
+}
+.slider-btns button{
+  background: none;
+  border:none;
+  cursor: pointer;
+  outline: none;
+}
+.slider__arrow{
+position: absolute;
+top: 51%;
+}
+.slider__arrow--next{
+  right: 12px;
+}
+.slider__arrow--prev{
+  left: -1px;
+}
+
+.slider-item-content{
+   display: flex;
+   max-width: 860px;
+   margin:0 auto;
+}
+.slider-img-vertical{
+padding-top: 53px;
+padding-left: 23px;
+}
+.phone-off-vertical{
+  position: absolute;
+  height: 333px;
+  width: 189px;
+  margin-top: 65px;
+  margin-left: 13px;
+  
+  cursor: pointer;
+  border-radius: 2px;
+  z-index: 4;
 }
 .slider-img-horizontal{
-    padding-top: 121px;
+  padding-top: 174px;
+  padding-left: 73px;
 }
-.slick-btn{
+.phone-off-horizontal{
+  position: absolute;
+  height: 189px;
+  width: 333px;
+  margin-top:13px;
+  margin-left: 60px;
+  background:rgba(0,0,0,1.0);
+  cursor: pointer;
+  border-radius: 2px;
+  z-index: 4;
+}
+
+.sliders-img-vertical{
+  max-width: 517px;
+  padding-top:60px;
+  margin:0 auto; 
+}
+
+/*.slick-btn{
     position: absolute;
     z-index:3;
     top:46%;
@@ -107,10 +240,11 @@ li{
 }
 .slick-prev{
   left:0;
-}
+}*/
 .slider-border{
    height: 6px;
    background-color:#ea676b;
+   width: 100vw;
 }
 
 
@@ -179,6 +313,8 @@ li{
   background-color:#fff;
 }	
 
+
+
 .portfolio{
 	background-color: #2d303a;
 	min-height: 863px;
@@ -203,6 +339,8 @@ li{
 }
 .portfolio-btn-box{
 	margin-bottom: 20px;
+  /*pointer-events: none;*/
+  display:inline-block;
 }
 .portfolio-btn-box button{
 	font-family:'Lato', sans-serif;
@@ -217,11 +355,17 @@ li{
     background-color: transparent;
     outline:none;
 }
-.portfolio-btn-box button:hover{
+.portfolio-btn-box button:not(.active-btn):hover{
     color:#fff;
     border:solid 1px #fff;
     cursor:pointer;
 }
+.portfolio-btn-box button.active-btn{
+    background-color: #fff;
+    cursor: default;
+
+}
+
 /*.portfolio-btn-box li:hover{
 	border:solid 1px #fff;
 	color:red;
@@ -236,7 +380,17 @@ li{
 .portfolio-item{
 	height: 187px;
 	margin-bottom: 20px;
+  cursor: pointer;
 }
+
+
+.portfolio-item.border{
+  overflow: hidden;
+  outline: solid 5px #F06C64; 
+  outline-offset: -5px;
+  cursor: auto;
+}
+
 .portfolio-border{
 	height: 6px;
 	background-color: #323746;
@@ -436,20 +590,20 @@ li{
   font-family: 'icomoon';
   content: "\f095";
   right: 10px;
-    padding-left:13px;
-    display: inline-block;
-    top:7px;
-    left:-5px;
-    transform: rotate(270deg);
-    font-size: 13px;
+  padding-left:13px;
+  display: inline-block;
+  top:7px;
+  left:-5px;
+  transform: rotate(270deg);
+  font-size: 13px;
 }
 .form-box-links .link-email a:before{
   font-family: 'icomoon';
   content: "\f003";
   position:relative;
   right: 11px;
-    padding-left:12px;
-    line-height: 20px;
+  padding-left:12px;
+  line-height: 20px;
 }
 .form-border{
   height: 6px;
@@ -465,6 +619,7 @@ li{
     font-family:'Lato', sans-serif;
     font-weight: 900;
     font-size: 22px;
+    border-radius: 5px;
 }
 .form-box-right button:hover{
     color:#f0c5c4;
@@ -473,7 +628,7 @@ li{
 }
 
 .footer-inner{
-    min-height: 77px;
+    min-height:88px;
     background-color: #2d303a;
 }
 .footer-content{
@@ -499,4 +654,56 @@ li{
     margin-top: 21px;
     cursor: pointer;
     outline: none;
+}
+
+#message-block{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background: #0008;
+  display: block;
+}
+#message-block.hidden{
+  display: none;
+}
+#message{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  border:solid 3px #f0c5c4;
+  text-align: left;
+  padding: 30px 50px;
+  background-color:#f06c64;
+  border-radius: 5px;
+}
+#message p{
+    font-family:'Lato', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color:#f0c5c4;
+    line-height: 25px;
+}
+#message button{
+    height: 60px;
+    width: 100%;
+    background-color: #d6564f;
+    border:none;
+    outline: none;
+    color:#e16a67;
+    font-family:'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    border-radius: 5px;
+}
+#message button:hover{
+    color:#f0c5c4;
+    border:solid 3px #f0c5c4;
+    cursor: pointer;
+}
+.message-content{
+  width: 50vw;
+  height: 50vh;
 }

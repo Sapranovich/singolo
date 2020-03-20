@@ -5,7 +5,7 @@
 	<title>Singolo</title>
 	<link rel="stylesheet" href="assets/css/fonts.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-	<link rel="stylesheet" href="assets/css/slick.css">
+	<!-- <link rel="stylesheet" href="assets/css/slick.css"> -->
 	<link rel="stylesheet" href="assets/css/icomoon.css">
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -20,8 +20,8 @@
 		            </div>
                        
 		            <nav class="header-menu">
-		                <ul>
-		                    <li><a onclick="return false" class="header-menu-link" href="#">HOME</a></li><p>•</p>
+		                <ul id='menu'>
+		                    <li><a  class="header-menu-link active" href="#Ihome">HOME</a></li><p>•</p>
 		                    <li><a class="header-menu-link" href="#Iservices">SERVICES</a></li><p>•</p>
 		                    <li><a class="header-menu-link" href="#Iportfolio">PORTFOLIO</a></li><p>•</p>
 		                    <li><a class="header-menu-link" href="#Iabout">ABOUT</a></li><p>•</p>
@@ -36,31 +36,47 @@
 	</header>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
     <main>
-	<section>
+	<section id='Ihome'>
 		<div class="slider">
-		<div class="container">
-			<div class="slider-inner">
 
-				<div class="slider-item">
-					<div class="slider-item-content">
-						<div class="slider-img-vertical">
-						    <img src="assets/img/slider/iPhoneVertical.png" alt="#">
-						</div>
-						<div class="slider-img-horizontal">
-						    <img src="assets/img/slider/iPhoneHorizontal.png" alt="#">
-						</div>
-					</div>
-				</div>
-				<div class="slider-item"></div>
-				
-			</div>
-		</div>
-		</div>
+            <div class="slider__container">
+
+			<ul class="slider__list" style="width: 300vw; left: 0vw; transition: left 1s ease-in-out 0s;">
+
+                <li class='slider__item' style="background-color: #F06C64">
+                    <div class="slider-item-content">
+                        <div class="slider-img-vertical">
+                            <div class="phone-off-vertical" style='background:rgba(0,0,0,1.0);'></div>
+                            <img src="assets/img/slider/iPhoneVertical.png" alt="#">
+                        </div>
+                        <div class="slider-img-horizontal">
+                        	<div class="phone-off-horizontal" style='background:rgba(0,0,0,0.0);'></div>
+                            <img src="assets/img/slider/iPhoneHorizontal.png" alt="#">
+                        </div>
+                    </div>
+                </li>
+
+                <li class='slider__item' style="background-color: #648BF0">
+                    <div class="sliders-img-vertical">
+                        <img src="assets/img/slider/Sliders.png" alt="#"> 
+                    </div>
+                </li>
+
+            </ul>
+            <div class="slider-btns">
+                <button class='slider__arrow slider__arrow--prev' id='prev_slide'>
+                    <img src="assets/img/slider/chev-prev.png" alt="#">
+                </button>
+                <button class='slider__arrow slider__arrow--next' id='next_slide'>
+                    <img src="assets/img/slider/chev-next.png" alt="#">
+                </button>
+            </div>
+            </div>  
 		<div class="slider-border"></div>
 	</section>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-	<section>
-		<div id="Iservices" class="services">
+	<section id="Iservices">
+		<div  class="services">
 			<div class="container">
 			<div class="services-inner">
 				<div class="services-top">
@@ -182,8 +198,8 @@
 		<div class="services-border"></div>
 	</section>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-	<section>
-    		<div id="Iportfolio" class="portfolio">
+	<section id="Iportfolio">
+    		<div class="portfolio">
     		<div class="container">
     			<div class="portfolio-inner">
     				<div class="portfolio-top">
@@ -195,8 +211,9 @@
     				    </div>
     			    </div>
 
-    			    <div class="portfolio-btn-box">
-    			    	<button type="button">All</button>
+    			    <div class="portfolio-btn-box" id='portfolio-btn-box-btn'>
+
+    			    	<button disabled class="active-btn" type="button">All</button>
     			    	<button type="button">Web Desigen</button>
     			    	<button type="button">Graphic Design</button>
     			    	<button type="button">Artwork</button>
@@ -214,99 +231,31 @@
 
 
     			<div class="portfolio-content">
-                    <div class="portfolio-items">
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/1.jpg" alt="#">
-                        	</a>
-                        </div>
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/2.jpg" alt="#">
-                        	</a>
-                        </div>
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/3.jpg" alt="#">
-                        	</a>
-                        </div>
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/4.jpg" alt="#">
-                        	</a>
-                        </div>
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/5.jpg" alt="#">
-                        	</a>
-                        </div>
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/6.jpg" alt="#">
-                        	</a>
-                        </div>
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/7.jpg" alt="#">
-                        	</a>
-                        </div>
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/8.jpg" alt="">
-                        	</a>
-                        </div>
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/9.jpg" alt="#">
-                        	</a>
-                        </div>
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/10.jpg" alt="#">
-                        	</a>
-                        </div>
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/11.jpg" alt="#">
-                        	</a>
-                        </div>
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/12.jpg" alt="#">
-                        	</a>
-                        </div>
+                    
+                        <ul class="portfolio-items" id='portfolio-items-id'>
 
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/11.jpg" alt="#">
-                        	</a>
-                        </div>
-                        <div class="portfolio-item">
-                        	<a onclick="return false" href="#" class="portfolio-item-link">
-                        		<img src="assets/img/Portfolio/12.jpg" alt="#">
-                        	</a>
-                        </div>
-<!-- 13-14 элементы!!!!!!!!!!!!!!!!!!!!! Не показываются -->
-                        <div class="portfolio-item">
-                            <a onclick="return false" href="#" class="portfolio-item-link">
-                                <img src="assets/img/Portfolio/11.jpg" alt="#">
-                            </a>
-                        </div>
-                        <div class="portfolio-item">
-                            <a onclick="return false" href="#" class="portfolio-item-link">
-                                <img src="assets/img/Portfolio/12.jpg" alt="#">
-                            </a>
-                        </div>
-                    </div>
+                            <li class='portfolio-item border'><img src="assets/img/Portfolio/1.jpg" alt="#"></li>
+                            <li class='portfolio-item'><img src="assets/img/Portfolio/2.jpg" alt="#"></li>
+                            <li class='portfolio-item'><img src="assets/img/Portfolio/3.jpg" alt="#"></li>
+                            <li class='portfolio-item'><img src="assets/img/Portfolio/4.jpg" alt="#"></li>
+                            <li class='portfolio-item'><img src="assets/img/Portfolio/5.jpg" alt="#"></li>
+                            <li class='portfolio-item'><img src="assets/img/Portfolio/6.jpg" alt="#"></li>
+                            <li class='portfolio-item'><img src="assets/img/Portfolio/7.jpg" alt="#"></li>
+                            <li class='portfolio-item'><img src="assets/img/Portfolio/8.jpg" alt="#"></li>
+                            <li class='portfolio-item'><img src="assets/img/Portfolio/9.jpg" alt="#"></li>
+                            <li class='portfolio-item'><img src="assets/img/Portfolio/10.jpg" alt="#"></li>
+                            <li class='portfolio-item'><img src="assets/img/Portfolio/11.jpg" alt="#"></li>
+                            <li class='portfolio-item'><img src="assets/img/Portfolio/12.jpg" alt="#"></li>    
+                        </ul>
     			</div>
-    			</div>
+                </div>
     		</div>
-    		</div>
+            </div>
     		<div class="portfolio-border"></div>
     	</section>
     <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-        <section>
-        	<div id="Iabout" class="about">
+        <section id="Iabout">
+        	<div class="about">
     		<div class="container">
     			<div class="about-inner">
     			<div class="about-top">
@@ -400,8 +349,9 @@
     		<div class="about-border"></div>
     	</section>		
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-    <section>
-    <div id="Iform" class="form">
+    <section id="Iform">
+  
+    <div class="form">
 	    	<div class="container">
 	    		<div class="form-content">
 					<div class="form-title-box">
@@ -413,18 +363,19 @@
 					    </div>
 					</div>
 					<div class="form-box">
-						<form action="#" method="post">
+                        <!-- method="post" -->
+						<form action="" method="post" onsubmit="return false">
 							<div class="form-box-inner">
 								<div class="form-box-left">
 									
-										<input required minlength="2" maxlength="30" type="text" name="name" placeholder="Name (Required)">
+										<input id='name' required minlength="2" maxlength="30" type="text" name="name" placeholder="Name (Required)">
 									
-										<input required maxlength="40" type="email" name="Email" placeholder="Email (Required)">
+										<input id='email' required maxlength="40" type="email" name="email" placeholder="Email (Required)">
 									
-										<input maxlength="50" type="text" name="subject" placeholder="Subject">
+										<input id='subject' maxlength="50" type="text" name="subject" placeholder="Subject">
 									
 									
-										<textarea maxlength="900" name="comment" placeholder="Describe your project in detail..."></textarea>
+										<textarea id='describe' maxlength="900" name="comment" placeholder="Describe your project in detail..."></textarea>
 									
 								</div>
 								<div class="form-box-right">
@@ -445,7 +396,7 @@
 										</div>
 									</div>
 									
-									<button class="default-btn" type="submit" name="submit">
+									<button id = 'btn' type='submit' class="default-btn">
 										Submit
 									</button>
 								</div>
@@ -455,7 +406,18 @@
 				</div>
 	    	</div>
 	    	</div>
-	    	<div class="form-border"></div>
+
+	<div id="message-block"class="hidden">
+        <div id="message">
+            <p>Письмо отправлено</p>
+        <div class="message-content">
+            <p id="result-subject"></p>
+            <p id="result-describe"></p>
+        </div>
+            <button id="close-btn">OK</button> 
+        </div>
+    </div>  
+	    	<div class="form-border" class="default-btn"></div>
 </section>
 	<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 </main>
@@ -486,9 +448,9 @@
 	<div class="footer-border"></div>
 </footer>
 
-
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-	<script src="assets/js/main.js"></script>
+    <!-- <script src="assets/js/jquery-3.4.1.min.js"></script> -->
+    <!-- <script src="assets/js/slick.min.js"></script> -->
+	<!-- <script src="assets/js/main.js"></script> -->
+    <script src="script.js"></script>
 </body>
 </html>
