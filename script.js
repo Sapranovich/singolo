@@ -27,7 +27,6 @@ function onScroll(event){
 
     sections.forEach((el)=>{
       if((el.offsetTop -30) <= curPos && (el.offsetTop + el.offsetHeight + '100') > curPos){
-        debugger;
          links.forEach((a)=>{
            a.classList.remove('active');
            if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
@@ -159,9 +158,13 @@ const FORM = document.querySelector('form');
 // const FORM =document.querySelector('form');
 // NAME.value !== '' && EMAIL.value !== ''
 SUBMIT.addEventListener('click',()=>{
-  if(NAME.value !== '' && EMAIL.value !== '') {
+  if(NAME.reportValidity() && EMAIL.reportValidity() ) {
+
+
   const SUBJECT =document.getElementById('subject').value.toString();
   const DESCRIBE =document.getElementById('describe').value.toString();
+
+
   if(!SUBJECT==''){
     document.getElementById('result-subject').innerText= 'Тема: '+ SUBJECT;
   }else document.getElementById('result-subject').innerText= 'Без темы';
