@@ -1,6 +1,9 @@
 *{
   box-sizing: border-box;
 }
+html{
+scroll-behavior: smooth;
+}
 a{
   text-decoration: none;// Убираем подчеркивание у ссылок
   display: inline-block;
@@ -18,7 +21,11 @@ li{
   margin:0 auto; /* Центровка */
   padding:0 10px; 
 }
-
+header{
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
+}
 .header{
   background-color: #2d303a;
   min-height: 89px;
@@ -63,6 +70,7 @@ li{
   color:#ea676b;
   cursor: default;
 }
+
 .header-menu-link:not(.active):hover{
   color:#f06c64;
 }
@@ -94,9 +102,33 @@ li{
   width: 100vw;
   display: inline-block;
 }*/
+/*.slider:after{
+  content: "";
+  padding-top:89px;
+  margin-top: 89px;
+}*/
+
+#Iservices{
+  padding-top: 89px;
+  margin-top: -89px;
+}
+#Iportfolio{
+  padding-top: 89px;
+  margin-top: -89px;
+}
+#Iabout{
+  padding-top: 89px;
+  margin-top: -89px;
+}
+#Iform{
+  padding-top: 88px;
+  margin-top: -88px;
+}
+
 .slider{
   position: relative;
   width: 100vw;
+  margin-top: 89px;
 }
 .slider__container{
   position: relative;
@@ -166,7 +198,7 @@ padding-left: 23px;
   
   cursor: pointer;
   border-radius: 2px;
-  z-index: 100;
+  z-index: 4;
 }
 .slider-img-horizontal{
   padding-top: 174px;
@@ -181,7 +213,7 @@ padding-left: 23px;
   background:rgba(0,0,0,1.0);
   cursor: pointer;
   border-radius: 2px;
-  z-index: 10;
+  z-index: 4;
 }
 
 .sliders-img-vertical{
@@ -596,7 +628,7 @@ padding-left: 23px;
 }
 
 .footer-inner{
-    min-height: 77px;
+    min-height:88px;
     background-color: #2d303a;
 }
 .footer-content{

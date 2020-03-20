@@ -1,11 +1,47 @@
 // Переключение меню
-const MENU = document.getElementById('menu');
+// const MENU = document.getElementById('menu');
+// const SECTION = document.querySelectorAll('section');
+// const ARR = document.querySelectorAll('nav > ul > li>a');
+// let i=0;
+
+// MENU.addEventListener('click', (event)=> {
+// 	MENU.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
+// 	event.target.classList.add('active');
+
+// });
+
+// window.addEventListener('scroll', function(){
+  
+// });
 
 
-MENU.addEventListener('click', (event)=> {
-	MENU.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
-	event.target.classList.add('active');
-});
+
+document.addEventListener('scroll', onScroll);
+
+
+function onScroll(event){
+    const curPos = window.scrollY;
+    const sections = document.querySelectorAll('main > section');
+    const links = document.querySelectorAll('nav > ul > li > a');
+
+
+    sections.forEach((el)=>{
+      if((el.offsetTop -30) <= curPos && (el.offsetTop + el.offsetHeight + '100') > curPos){
+        debugger;
+         links.forEach((a)=>{
+           a.classList.remove('active');
+           if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+              a.classList.add('active');
+           }
+         })
+      }
+    });
+}
+
+
+
+
+
 // ________________________________________________________________________________________________________________________________
 // Включение и отключение экранов  
 const SCREENh = document.querySelector('.phone-off-horizontal');
