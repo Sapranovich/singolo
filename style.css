@@ -26,6 +26,14 @@ header{
   width: 100vw;
   z-index: 10;
 }
+
+img {
+ max-width: 100%;
+ height: auto;
+ width: auto; /* ie8 */
+}
+
+
 .header{
   background-color: #2d303a;
   min-height: 89px;
@@ -708,3 +716,4 @@ padding-left: 23px;
   width: 50vw;
   height: 50vh;
 }
+
