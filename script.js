@@ -38,6 +38,29 @@ function onScroll(event){
 }
 
 
+const BURGER = document.querySelector('.menu-btn');
+const MENU = document.querySelector('.header-menu');
+const LOGO = document.querySelector('.header-logo');
+const SHADOW =document.querySelector('.shadow-header-menu');
+let n = 0;
+
+BURGER.addEventListener('click', (event) =>{
+    if(n == 0){
+      BURGER.style.transform = 'rotate(90deg)';
+      MENU.style.display = 'block';
+      SHADOW.style.display = 'block';
+      LOGO.style.left = '154px';
+      n=1;
+    }else {
+      BURGER.style.transform = 'rotate(0deg)';
+      MENU.style.display = 'none';
+      SHADOW.style.display = 'none';
+      LOGO.style.left = '50%';
+      n=0;
+    }; 
+
+});
+
 
 
 
