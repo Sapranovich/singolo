@@ -5,6 +5,9 @@
 		width: 768px;
 		padding:0 40px;
 	}
+  .header-logo{
+    margin-top: 14px;
+  }
 	.slider__container{
 		height: 452px;
 	}
@@ -165,6 +168,7 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: 5;
+        margin-top: 14px;
 	}
     .header-logo h1{
         line-height: 10px;
@@ -244,6 +248,7 @@
     	.slider-btns {
     	    width: 360px;
     	    margin-left: -174px;
+          top:44%;
     	}
     	.phone-off-vertical {
             width: 71px;
@@ -268,9 +273,6 @@
         .sliders-img-vertical {
             max-width: 185px;
             padding-top: 20px;
-        }
-        .slider-btns{
-            top:44%;
         }
 
         .services{
@@ -315,6 +317,9 @@
            min-width: 315px;
            width: 100%;
            padding-bottom: 30px;
+        }
+        .about-item-img img{
+            padding-left: 8px;
         }
         .about-border{
             display: none;
@@ -364,4 +369,19 @@
         .footer-copy{
         	display: none;
         }
+}
+
+@media (min-width: 320px) and (max-width: 374px){
+
+      .container{
+        width: 320px;
+        padding: 0px 0px;  
+      }
+
+      .slider-btns {
+          width: 100px;
+          margin-left: 60px;
+          bottom: -40px;
+      }
+          
 }
