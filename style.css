@@ -36,14 +36,15 @@ img {
 
 .header{
   background-color: #2d303a;
-  min-height: 89px;
+  min-height: 83px;
 }
 .header-content{
   display: flex;
   justify-content: space-between;
 }
 .header-logo{
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-left: -10px;
 }
 .header-logo h1{
     font-size: 25px;
@@ -60,7 +61,8 @@ img {
     color:#f06c64;
 }
 .header-menu{
-  margin-top: 26px;
+  margin-top: 21px;
+  margin-right: 10px;
 }
 .menu-btn{
   display: none;
@@ -437,6 +439,8 @@ padding-left: 23px;
 	max-width: 300px;
 	width: 100%;
 }
+.about-item-img img{
+}
 .about-item-name{
 	font-family:'Lato', sans-serif;
     font-weight: 900;
@@ -638,7 +642,7 @@ padding-left: 23px;
 }
 
 .footer-inner{
-    min-height:88px;
+    min-height: 76px;
     background-color: #2d303a;
 }
 .footer-content{
