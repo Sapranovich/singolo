@@ -81,10 +81,10 @@
 
 
     .about {
-       min-height: 669px;
+       min-height: 655px;
     }
     .about-inner {
-        padding: 52px 0px 70px;
+        padding: 52px 0px 60px;
     }
     .about-item {
        max-width: 219px;
