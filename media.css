@@ -19,10 +19,10 @@
         width: 100%;
         height: 100%;
 	}
-	.slider-btns{
-		width: 711px;
-		margin-left: -350px;
-	}
+	.slider-btns {
+        width: 726px;
+        margin-left: -363px;
+    }
 	.phone-off-vertical {
         width: 143px;
         height: 252px;
@@ -56,8 +56,10 @@
     	min-height: 675px;
     }
     .services-inner {
-        padding: 40px 0px 64px 0px;
         max-height: 675px;
+    }
+    .services-content{
+        justify-content: space-around;
     }
     .services-box{
     	width: 300px;
@@ -82,7 +84,7 @@
        min-height: 669px;
     }
     .about-inner {
-        padding: 52px 0px 75px;
+        padding: 52px 0px 70px;
     }
     .about-item {
        max-width: 219px;
@@ -307,6 +309,9 @@
         .about {
            min-height: 1676px;
         }
+        .about-text {
+            padding-bottom: 30px;
+        }
         .about-inner {
             padding: 25px 0px 25px;
         }
@@ -320,6 +325,9 @@
         }
         .about-item-img img{
             padding-left: 8px;
+        }
+        .about-item-text{
+            margin-bottom: 0px;
         }
         .about-border{
             display: none;
@@ -377,7 +385,9 @@
         width: 320px;
         padding: 0px 0px;  
       }
-
+      .portfolio-items{
+        justify-content: space-around;
+      }
       .slider-btns {
           width: 100px;
           margin-left: 60px;
