@@ -31,6 +31,13 @@ function onScroll(event){
            a.classList.remove('active');
            if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
               a.classList.add('active');
+              if (window.innerWidth < 768) {
+                BURGER.style.transform = 'rotate(0deg)';
+                MENU.style.display = 'none';
+                SHADOW.style.display = 'none';
+                LOGO.style.left = '50%';
+                n=0;
+              }
            }
          })
       }
